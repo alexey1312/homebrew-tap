@@ -1,6 +1,6 @@
 cask "ruensync" do
-  version "1.4.1"
-  sha256 "9030f5196f2c7df520e2b671c09d3212f4791bbdbfdc7516a019b86a8a7c6973"
+  version "1.4.2"
+  sha256 "773b00ea6d8f82ce300665701348e2b6a3d8307c7c8b9469ede9fc6acdc3e2f8"
 
   url "https://github.com/alexey1312/ruen-sync-mac/releases/download/v#{version}/RuEnSync.dmg"
   name "RuEnSync"
