@@ -6,16 +6,20 @@ class Baton < Formula
 
   depends_on "gh"
 
+  # macOS asset is built native arm64 (no universal build yet); Intel macOS is
+  # unsupported (no on_intel block under on_macos), so brew install fails there.
   on_macos do
-    # macOS asset is built native arm64 (no universal build yet); Intel is unsupported.
-    url "https://github.com/alexey1312/swift-baton/releases/download/v#{version}/baton-v#{version}-macos.tar.gz"
-    sha256 "7eb595865d482dd2ff506066c9a9bac7b4c696772e07ce2fa1699f3de6108e20"
-    depends_on arch: :arm64
+    on_arm do
+      url "https://github.com/alexey1312/swift-baton/releases/download/v#{version}/baton-v#{version}-macos.tar.gz"
+      sha256 "7eb595865d482dd2ff506066c9a9bac7b4c696772e07ce2fa1699f3de6108e20"
+    end
   end
 
   on_linux do
-    url "https://github.com/alexey1312/swift-baton/releases/download/v#{version}/baton-v#{version}-linux-x86_64.tar.gz"
-    sha256 "99ba50f5e9013e26bda3b9df7af6c2ff3f0862be5541260f69c0b3a98c3c3148"
+    on_intel do
+      url "https://github.com/alexey1312/swift-baton/releases/download/v#{version}/baton-v#{version}-linux-x86_64.tar.gz"
+      sha256 "99ba50f5e9013e26bda3b9df7af6c2ff3f0862be5541260f69c0b3a98c3c3148"
+    end
   end
 
   def install
