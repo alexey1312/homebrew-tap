@@ -1,7 +1,7 @@
 class Baton < Formula
   desc "Monorepo AI code-review orchestrator"
   homepage "https://github.com/alexey1312/baton"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   depends_on "gh"
@@ -11,14 +11,14 @@ class Baton < Formula
   on_macos do
     on_arm do
       url "https://github.com/alexey1312/baton/releases/download/v#{version}/baton-v#{version}-macos.tar.gz"
-      sha256 "bb99276c9146aee88a42398da230a0cacb955d4e7a4512618fdee911f7a9a3b5"
+      sha256 "05298b0952fe65c62fade2ee63d34e91cfec5b3e60a464e0d9f12d485e78f21b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/alexey1312/baton/releases/download/v#{version}/baton-v#{version}-linux-x86_64.tar.gz"
-      sha256 "7497b5e7c69c1df7cca0e332fb7a14a2d910512a5c0a0a0085c2361608a4dc07"
+      sha256 "218997346f1debbe680179b77eb7be1adaa202f001f355fe973ec07c98488b17"
     end
   end
 
