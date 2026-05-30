@@ -1,7 +1,7 @@
 class Baton < Formula
   desc "Monorepo AI code-review orchestrator"
-  homepage "https://github.com/alexey1312/swift-baton"
-  version "0.1.2"
+  homepage "https://github.com/alexey1312/baton"
+  version "0.1.3"
   license "MIT"
 
   depends_on "gh"
@@ -10,15 +10,15 @@ class Baton < Formula
   # unsupported (no on_intel block under on_macos), so brew install fails there.
   on_macos do
     on_arm do
-      url "https://github.com/alexey1312/swift-baton/releases/download/v#{version}/baton-v#{version}-macos.tar.gz"
-      sha256 "7eb595865d482dd2ff506066c9a9bac7b4c696772e07ce2fa1699f3de6108e20"
+      url "https://github.com/alexey1312/baton/releases/download/v#{version}/baton-v#{version}-macos.tar.gz"
+      sha256 "bb99276c9146aee88a42398da230a0cacb955d4e7a4512618fdee911f7a9a3b5"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/alexey1312/swift-baton/releases/download/v#{version}/baton-v#{version}-linux-x86_64.tar.gz"
-      sha256 "99ba50f5e9013e26bda3b9df7af6c2ff3f0862be5541260f69c0b3a98c3c3148"
+      url "https://github.com/alexey1312/baton/releases/download/v#{version}/baton-v#{version}-linux-x86_64.tar.gz"
+      sha256 "7497b5e7c69c1df7cca0e332fb7a14a2d910512a5c0a0a0085c2361608a4dc07"
     end
   end
 
